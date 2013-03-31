@@ -1,0 +1,19 @@
+RewriteEngine On
+
+Order Deny,Allow
+Allow from all
+
+Options -Indexes +FollowSymLinks
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+# Rewriting
+RewriteRule ^(.*)$ %{ENV:REWRITEBASE}index.php [L]
+
+#RewriteRule ^([a-z0-9-]+)/?$ index.php?page=$1 [NC,L]
+
+
+ 

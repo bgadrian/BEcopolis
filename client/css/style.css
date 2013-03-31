@@ -1,0 +1,408 @@
+
+/***************************************************************************************************************
+*
+* BUFU - don't steal
+*
+* BTooLs.eu reset css file
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    line-height:1em;
+    vertical-align: baseline;
+    font-style: normal;
+    font-weight:normal;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-size: 1em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: "" "";
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+p{margin:0.4em 0;}
+h1,h2,h3,h4,h5,h6 {font-weight: bold;}
+h1 {font-size:1.8em;}
+h2 {font-size:1.6em;}
+h3 {font-size:1.4em;}
+h4 {font-size:1.3em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1.1em;}
+
+
+
+
+
+/** **************************************************************************************************************
+
+                    T E M P L A T E
+
+ ******************************************************************************************************************/
+
+
+
+body {
+    text-align: center;
+    position: relative;
+    background:url('images/back.jpg') #fff repeat top left;
+    color:#000;
+}
+body, * {
+    font-family: "Lucida Grande",sans-serif;
+}
+
+.red {color:red;}
+#wrapper, #login {
+    margin-top:30px;
+    background: #fff;
+    color:#000;
+    display:none;
+}
+.middle {
+    position: relative;
+    margin:0 auto;
+    width:720px;
+    height:auto;
+}
+
+a, a:visited {color:#00adee;}
+
+.float {
+    background-color:rgba(107,157,40,0.8);
+    padding:5px;
+    color:#fff;
+    font-weight: lighter;
+    font-style: italic;
+    position:fixed;
+    border:2px solid #436b0c;
+}
+#slogan {bottom:0;left:0}
+#status {bottom:0;right:0}
+
+
+
+#error {
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.8);
+    width:  100%;
+    height: 100%;
+    display:block;
+    text-align:center;
+}
+#error span {
+    position:relative;
+    margin:50% auto;
+    color:#f78d1d;
+    text-align: center;
+    width:auto;
+    height:auto;
+    display: block;
+}
+
+#wrapper{
+    background: url('images/top.jpg') transparent no-repeat top left;
+}
+h4{
+    padding:10px;
+    font-weight:bolder;
+    font-size:23px;
+    font-family: "Lucida Grande",sans-serif;
+    color:#b8db29;
+    text-shadow: 1px 1px 3px #0c3302;
+    text-align: center;
+}
+
+/** **************************************************************************************************************
+
+                    C I T Y
+
+ ******************************************************************************************************************/
+
+
+#city_wrapper {
+    position:relative;
+    display:block;
+}
+#messages {
+    position:absolute;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    z-index:5;
+    border:0px solid red;
+}
+
+#messages div {
+    position:absolute;
+    padding:10px;
+    text-align:center;
+    color:#fff;
+    background:#5a8f00;
+    /* css3 */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+    background:-moz-linear-gradient(#b8db29, #5a8f00);
+    background:-o-linear-gradient(#b8db29, #5a8f00);
+    background:linear-gradient(#b8db29, #5a8f00);
+    border-radius: 30px;
+}
+#messages div span {
+    color: #23441e;
+    padding:5px;
+}
+#city {
+    width: 720px;
+    height:300px;
+    color:black;
+}
+#city td,#city th {
+    width:120px;
+    text-align: center;
+    position:relative;
+}
+#city th {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 27px;
+    color:#0078a5;
+}
+#city th p { /** percent big */
+    font-size:32px;
+    color:#b8db29;
+    text-shadow: 1px 1px 1px #000;
+    font-family: Arial,serif;
+}
+
+.attr div { /** Green level div */
+    position:relative;
+    display: block;
+    width:120px;
+    height:200px;
+}
+#title {
+    width: 700px;
+    height: 50px;
+    font-size:22px;
+}
+#city thead {
+    width: 720px;
+    height: 100px;
+    display:block;
+}
+#city tbody {
+    background: url('images/city_poll.jpg') transparent no-repeat top left;
+    width:720px;
+    height:200px;
+}
+
+#city_stats {
+    padding:5px;
+    color:#000000;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.attr.attr_power  div    {background:url('images/power.jpg') transparent no-repeat top left;}
+.attr.attr_water  div    {background:url('images/water.jpg') transparent no-repeat top left;}
+.attr.attr_food   div    {background:url('images/food.jpg') transparent no-repeat top left;}
+.attr.attr_transport div {background:url('images/transport.jpg') transparent no-repeat top left;}
+.attr.attr_recycle div   {background:url('images/recycle.jpg') transparent no-repeat top left;}
+.attr.attr_commerce div  {background:url('images/commerce.jpg') transparent no-repeat top left;}
+
+/** **************************************************************************************************************
+
+                    Q U E S T I O N S
+
+ ******************************************************************************************************************/
+
+#q {
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #a3ef16;
+    margin:10px;
+}
+#actions {
+    min-height:200px;
+    border: 0px solid black;
+    position: relative;
+    text-shadow: 0.1px 0.1px 0.1px black;
+    padding:20px;
+    /** http://www.colorzilla.com/gradient-editor/ */
+    background: #29a521; /* Old browsers */
+    background: -moz-linear-gradient(top, #29a521 0%, #1e560d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#29a521), color-stop(100%,#1e560d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #29a521 0%,#1e560d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #29a521 0%,#1e560d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #29a521 0%,#1e560d 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #29a521 0%,#1e560d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29a521', endColorstr='#1e560d',GradientType=0 ); /* IE6-9 */
+}
+#actions h3 {
+    letter-spacing: 0.2em;
+    padding:10px;
+    color:#fff;
+    font-size:1.2em;
+}
+
+#q_overlay {
+    width:100%;
+    height:100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    padding:5px;
+    font-size: 1em;
+    color: #7db72f;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#q_overlay p {
+    /** center text */
+    position:absolute;
+    top:40%;
+}
+
+#about {
+    width:690px;
+    padding:15px;
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#share {
+    margin-top: 20px;
+}
+
+
+
+
+/** **************************************************************************************************************
+
+                    L O G I N
+
+ ******************************************************************************************************************/
+
+
+
+#login {
+    background: #eaf8fc;
+    background-image: -moz-linear-gradient(#fff, #d4e8ec);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #d4e8ec),color-stop(1, #fff));
+
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;
+    width: 500px;
+    height:50px;
+    padding: 50px  10px;
+    margin: 50px auto 50px;
+    overflow: hidden; /* Clear floats */
+}
+
+#name, #login_btn
+{
+    float: left;
+}
+
+#name.placeholder {
+    color: #9c9c9c !important;
+    font-style: italic;
+}
+#name
+{
+    padding: 5px 9px;
+    height: 38px;
+    width: 380px;
+    border: 1px solid #a4c3ca;
+    font: normal 15px 'trebuchet MS', arial, helvetica;
+    background: #f1f1f1;
+
+    -moz-border-radius: 50px 3px 3px 50px;
+    border-radius: 50px 3px 3px 50px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* ----------------------- */
+
+#login_btn
+{
+    background: #6cbb6b;
+    background-image: -moz-linear-gradient(#95d788, #6cbb6b);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #6cbb6b),color-stop(1, #95d788));
+
+    -moz-border-radius: 3px 50px 50px 3px;
+    border-radius: 3px 50px 50px 3px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7eba7c #578e57 #447d43;
+
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+
+    height: 35px;
+    line-height: 35px !important;
+    width: 90px;
+    cursor: pointer;
+    font: bold 14px Arial, Helvetica;
+    color: #23441e;
+
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#login_btn:hover
+{
+    background: #95d788;
+    background-image: -moz-linear-gradient(#6cbb6b, #95d788);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #95d788),color-stop(1, #6cbb6b));
+}
+
+#login_btn:active
+{
+    background: #95d788;
+    outline: none;
+
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+#login_btn::-moz-focus-inner
+{
+    border: 0;  /* Small centering fix for Firefox */
+}

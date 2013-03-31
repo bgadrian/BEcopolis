@@ -1,0 +1,113 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="./js/underscore.min.1.4.4.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='./js/jquery.min.1.9.1.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <script src="./js/questions.js" type="text/javascript"></script>
+    <script src="./js/ui.js" type="text/javascript"></script>
+
+    <link  rel="stylesheet" href="./css/style.css">
+    <link  rel="stylesheet" href="./css/button.css">
+    <!-- Sharing is everything -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "dd22cae8-b820-4efe-abdb-7e51a7777c8e", doNotHash:
+        false, doNotCopy: false, hashAddressBar: true, onhover: false, tracking : true});</script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+
+</head>
+<body>
+
+
+<form id="login" class="middle">
+    <input id="name" type="text" placeholder="Your unique name" maxlength="20" required="required" />
+    <input type="submit" id="login_btn" class="button big green" value="Enter">
+    <input type="hidden" name="email" id="email" />
+    <p class="red"></p>
+</form>
+
+<div id="wrapper" class="middle">
+    <h4 id="title">Ecopolis is a virtual representation of a city, we want to measure how "green" it is by having you
+        and your
+        friends as citizens.</h4>
+    <div id="city_wrapper">
+        <table id="city">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+        <div id="messages"></div>
+    </div>
+    <div id="actions">
+        <div style="position: relative">
+            <h3>Are you doing this, for real ?</h3>
+            <div id="q"></div>
+            <div>
+                <span class="button bigrounded green" onclick="socket.emit('action',{attr:q_attr,direction:1});">Yes</span>
+                <span class="button bigrounded red" onclick="socket.emit('action',{attr:q_attr,direction:-1});">Not yet</span>
+            </div>
+            <div id="q_overlay">
+                <p>You must wait <span id="delay">0</span> seconds before answering to the next question, wait or bring
+                    more friends to increase Ecopolis green levels even further.</p>
+            </div>
+        </div>
+        <div id="share">
+            <!-- ShareThis Button BEGIN -->
+            <span class='st_plusone_vcount' displayText='Google +1'></span>
+            <span class='st_fblike_vcount' displayText='Facebook Like'></span>
+            <span class='st_facebook_vcount' displayText='Facebook'></span>
+            <span class='st_twitter_vcount' displayText='Tweet'></span>
+            <span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+            <span class='st_pinterest_vcount' displayText='Pinterest'></span>
+            <span class='st_email_vcount' displayText='Email'></span>
+            <!-- ShareThis Button END -->
+        </div>
+    </div><!-- /actions -->
+    <div id="error"><span>Loading ... connecting ... or error.<br /> Do not open multiple tabs.</span></div>
+</div>
+<div id="city_stats">City started at <span id="start_time"></span> (<span id="online">0</span> citizen(s) online,
+    most <span id="max_online">0</span>). <span id="actions_count">0</span> questions answered.
+</div>
+<div id="about"  class="middle">
+    Project made by <a href="http://btools.eu">B.G.Adrian</a> and C.Adriana as a learning
+    project.
+    <br/> Online citizens are connected in real-time using the technologies:
+    <br />
+    <a href="http://socket.io/" target="_blank">socketIO.js</a>,
+    <a href="http://nodejs.org/" target="_blank">node.js</a>,
+    <a href="http://jquery.com/" target="_blank">jQuery</a>,
+    <a href="http://underscorejs.org/" target="_blank">underscore.js</a>,
+    <a href="https://www.appfog.com/" target="_blank">AppFog</a>
+    <br />Source codes available at <a href="#" target="_blank">github</a>.
+    <br />Contact me if you need this mini-game for your
+    <br />#greencity #pollution #cleanenergy #globalwarming campaign/website.
+</div>
+
+<div class="float" id="slogan">Your actions do count !</div>
+<div class="float" id="status">Not connected</div>
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-335656-14']);
+    _gaq.push(['_setDomainName', 'bcardgames.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>
