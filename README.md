@@ -1,11 +1,13 @@
 
-#Human State
+#BEcoPolis
 
 Is a learning personal project. I wanted to learn more about nodeJS and socketIO and decided to make a mini-mini-game.
-Terms
+
+Terms:
 - "the thing" - the main entity of the game, in this case a city (can be a human, a bird, or any concept)
 - "question" - The project can run with any kind of questions/statements/quiz, is a list of statements that can be
 answered with Yes/No
+
 
  The "game" flow is :
 * player choose a name
